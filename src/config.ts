@@ -19,6 +19,7 @@ export interface UnimportedConfig {
   moduleDirectory?: string[];
   aliases?: MapLike<string[]>;
   rootDir?: string;
+  preserveSymlinks?: boolean;
 }
 
 export async function expandGlob(

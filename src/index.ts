@@ -57,6 +57,7 @@ export interface Context {
   flow?: boolean;
   config: UnimportedConfig;
   moduleDirectory: string[];
+  preserveSymlinks?: boolean;
 }
 
 export async function main(args: CliArguments): Promise<void> {
@@ -101,6 +102,8 @@ export async function main(args: CliArguments): Promise<void> {
       moduleDirectory,
       ...args,
     };
+
+    context.preserveSymlinks = config.preserveSymlinks;
 
     context.ignore =
       config.ignorePatterns ||

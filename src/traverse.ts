@@ -85,6 +85,7 @@ export function resolveImport(
           basedir: cwd,
           extensions: context.extensions,
           moduleDirectory: context.moduleDirectory,
+          preserveSymlinks: context.preserveSymlinks,
         })
         .replace(/\\/g, '/'),
     };
@@ -104,6 +105,7 @@ export function resolveImport(
               basedir: cwd,
               extensions: context.extensions,
               moduleDirectory: context.moduleDirectory,
+              preserveSymlinks: context.preserveSymlinks,
             })
             .replace(/\\/g, '/'),
         };
@@ -121,6 +123,7 @@ export function resolveImport(
           basedir: cwd,
           extensions: context.extensions,
           moduleDirectory: context.moduleDirectory,
+          preserveSymlinks: context.preserveSymlinks,
         })
         .replace(/\\/g, '/'),
     };
